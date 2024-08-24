@@ -1,70 +1,94 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# MovieApp
 
-In the project directory, you can run:
+MovieApp is a React-based application that leverages The Movie Database (TMDb) API to display information about movies, including popular, top-rated, upcoming, and detailed movie information. The application also features a search functionality to find movies.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **List Movies**: Display a list of movies categorized by popularity, top-rated, and upcoming releases.
+- **Movie Details**: View detailed information about a specific movie, including its synopsis, rating, and more.
+- **Search Functionality**: Search for movies by title using the TMDb API.
+- **Responsive Design**: Tailwind CSS is used for styling, ensuring a responsive and modern user interface.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## API Configuration
 
-### `npm test`
+This project uses the [TMDb API](https://www.themoviedb.org/documentation/api) to fetch movie data. To get started, you need to configure the API key.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Create a `.env` file in the root directory.
+2. Add your TMDb API key in the following format:
 
-### `npm run build`
+   ```plaintext
+   REACT_APP_BASE_URL=https://api.themoviedb.org/3
+   REACT_APP_TMDB_API_KEY=your_api_key_here
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   git clone https://github.com/yourusername/movies_info_api.git
+   cd movies_info_api
+   ```
+2. Install the dependencies:
 
-### `npm run eject`
+   ```bash
+   npm install
+   ```
+3. Start the development server:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   npm start
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Usage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Once the development server is running, you can explore the different movie categories, view details for each movie, and use the search bar to find specific movies.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Project Structure
 
-## Learn More
+```plaintext
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+src/
+│
+├── components/
+│   ├── ListMovies.js
+│   ├── MovieDetails.js
+│   ├── Search.js
+│   └── ...
+│
+├── hooks/
+│   └── useFetch.js
+|	.....
+│
+├── pages/
+│   ├── Popular.js
+│   ├── TopRated.js
+│   ├── Upcoming.js
+│   └── ...
+│
+├── App.js
+└── index.js
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **components/**: Contains reusable React components like `ListMovies`, `MovieDetails`, and `Search`.
+- **hooks/**: Custom hooks such as `useFetch` for fetching data from the API.
+- **pages/**: Pages that correspond to different routes, such as popular, top-rated, and upcoming movies.
 
-### Code Splitting
+## Tailwind CSS
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Tailwind CSS is used for the styling of the application. The configuration is set up in `tailwind.config.js`. Make sure to install and configure Tailwind CSS by following the [official documentation](https://tailwindcss.com/docs/installation).
 
-### Analyzing the Bundle Size
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Feel free to submit issues, fork the repository, and send pull requests! Contributions are welcome.
 
-### Making a Progressive Web App
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This project is licensed under the MIT License.
 
-### Advanced Configuration
+## Acknowledgements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [The Movie Database (TMDb)](https://www.themoviedb.org/) for providing the API.
+- [Tailwind CSS](https://tailwindcss.com/) for the design framework.
